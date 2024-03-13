@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: pink;
+  font-family: monospace;
 }
 .App .App-header {
   background-color: antiquewhite;
