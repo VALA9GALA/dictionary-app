@@ -40,7 +40,7 @@ export default function Dictionary() {
         <input
           type="submit"
           value="Search"
-          className="btn btn-outline-secondary"
+          className="btn btn-outline-secondary shadow-sm"
         />
       </form>
       <br />
