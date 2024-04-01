@@ -33,7 +33,7 @@ export default function Dictionary() {
         <input
           type="search"
           className="pb-1 me-2"
-          placeholder="Enter a word"
+          placeholder="Enter a word..."
           autoFocus
           onChange={keywordChange}
         />
