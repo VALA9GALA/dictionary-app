@@ -1,6 +1,8 @@
 .Dictionary {
   background-color: white;
 }
-em {
+
+em,
+.word {
   color: palevioletred;
 }
