@@ -10,9 +10,8 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <h2>
-          <span className="word">{props.results.word}</span>
-          {" "}
+        <h2 className="word-section">
+          <span className="word">{props.results.word}</span>{" "}
           <span>{props.results.phonetic}</span>
           <span>
             {" "}
@@ -26,6 +25,7 @@ export default function Results(props) {
             </a>
           </span>
         </h2>
+        <br />
         {props.results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>
