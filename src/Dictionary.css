@@ -1,5 +1,6 @@
 .Dictionary {
   background-color: white;
+  padding: 10px;
 }
 form {
   padding-top: 25px;
@@ -31,4 +32,8 @@ em,
   border-radius: 22px;
   padding: 3px 7px;
   list-style: none;
+}
+.audioIcon {
+  cursor: pointer;
+  color: rgb(195, 34, 85);
 }
