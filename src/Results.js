@@ -10,16 +10,16 @@ import { faMicrophoneLines } from "@fortawesome/free-solid-svg-icons";*/
 export default function Results(props) {
   if (props.results) {
     const phoneticsArray = props.results.phonetics;
-    /*const phoneticWord = phoneticsArray.find((text) => text !== "");*/
-    const audioFile = phoneticsArray.find(({ audio }) => audio !== "");
+    const phoneticWord = phoneticsArray.find(({ text }) => text);
+    const audioFile = phoneticsArray.find(({ audio }) => audio);
 
     return (
       <div className="Results">
         <h2 className="word-section">
           <span className="word">{props.results.word}</span>{" "}
-          <span>{props.results.phonetic}</span>{" "}
+          <span>{phoneticWord.text}</span>{" "}
           <span>
-            <Audio audio={audioFile.audio} />
+            <Audio audio={audioFile} />
             {/*<a
               className="audioIcon"
               href={audioFile.audio}

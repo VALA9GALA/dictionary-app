@@ -14,11 +14,14 @@ export default function Meaning(props) {
               <em className="example mb-5">{definition.example}</em>
             </p>
 
-            <Synonyms synonyms={definition.synonyms} />
+            <Synonyms
+              synonyms={definition.synonyms}
+              duplicate={props.meaning.synonyms}
+            />
           </div>
         );
       })}
-
+      {/*<h4>Synonyms</h4>*/}
       {props.meaning.synonyms.map(function (synonym, index) {
         return (
           <div className="meaning-synonyms">
@@ -30,6 +33,18 @@ export default function Meaning(props) {
           </div>
         );
       })}
+      {/*<br/>
+      {props.meaning.antonyms.map(function (antonym, index) {
+        return (
+          <div className="meaning-synonyms">
+            <ul>
+              <li key={index} className="synonyms">
+                {antonym}
+              </li>
+            </ul>
+          </div>
+        );
+      })}*/}
     </div>
   );
 }
