@@ -1,20 +1,31 @@
 .Dictionary {
-  background-color: white;
+  background-color: aliceblue;
   padding: 10px;
+  border-radius: 16px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 4px 7px #373f51ff;
 }
 form {
   padding-top: 25px;
+}
+.search-input {
+  width: 45%;
 }
 .part-of-speech {
   color: gray;
 }
 .word-section {
-  background-color: antiquewhite;
   padding: 10px;
 }
-em,
 .word {
-  color: palevioletred;
+  color: #daa49aff;
+}
+em {
+  color: #58a4b0ff;
+}
+section {
+  margin: 10px;
 }
 .Synonyms,
 .Meaning .meaning-synonyms {
@@ -25,15 +36,14 @@ em,
 .Synonyms li,
 .Meaning .synonyms {
   margin-right: 10px;
-
   display: inline;
   width: fit-content;
-  border: 1px solid palevioletred;
+  border: 1px solid #daa49aff;
   border-radius: 22px;
   padding: 3px 7px;
   list-style: none;
 }
 .audioIcon {
   cursor: pointer;
-  color: rgb(195, 34, 85);
+  color: #58a4b0ff;
 }

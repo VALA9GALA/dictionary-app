@@ -4,9 +4,6 @@ import Audio from "./Audio";
 
 import "./Dictionary.css";
 
-/*import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrophoneLines } from "@fortawesome/free-solid-svg-icons";*/
-
 export default function Results(props) {
   if (props.results) {
     const phoneticsArray = props.results.phonetics;
@@ -15,27 +12,23 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <h2 className="word-section">
-          <span className="word">{props.results.word}</span>{" "}
-          <span>{phoneticWord.text}</span>{" "}
-          <span>
-            <Audio audio={audioFile} />
-            {/*<a
-              className="audioIcon"
-              href={audioFile.audio}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faMicrophoneLines} />
-    </a>*/}
-          </span>
-        </h2>
+        <section className="word-phonetic-audio">
+          <h2 className="word-section">
+            <span className="word">{props.results.word}</span>{" "}
+            <span>{phoneticWord.text}</span>{" "}
+            <span>
+              <Audio audio={audioFile} />
+            </span>
+          </h2>
+        </section>
         <br />
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
-              <Meaning meaning={meaning} />
-            </div>
+            <section className="meanings">
+              <div key={index}>
+                <Meaning meaning={meaning} />
+              </div>
+            </section>
           );
         })}
       </div>
