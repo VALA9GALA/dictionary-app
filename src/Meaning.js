@@ -26,7 +26,7 @@ export default function Meaning(props) {
         return (
           <div className="meaning-synonyms">
             <ul>
-              <li key={index} className="synonyms">
+              <li key={index} className="synonyms text-dark-emphasis">
                 {synonym}
               </li>
             </ul>

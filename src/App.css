@@ -1,8 +1,8 @@
 body {
   margin: 20px;
   text-align: center;
-  background-color: #a9bcd0ff;
-
+  background-color: rgb(218, 173, 224);
+  background-image: linear-gradient(rgb(183, 129, 190), rgb(254, 226, 238));
   font-family: monospace;
 }
 
@@ -14,24 +14,35 @@ body {
   border-radius: 16px;
 }
 .App a {
-  color: rgb(195, 34, 85);
+  color: #d64933ff;
 }
 h1 {
   margin: 0;
 }
 .valagala-title {
-  font-family: cursive;
-  color: rgb(195, 34, 85) !important;
+  font-family: Lobster;
+  color: #d64933ff !important;
+  font-size: 57px;
+  letter-spacing: 14px;
+  text-shadow: 2px 2px rgb(97, 91, 102);
 }
+.title-pos {
+  color: #7c7c7cff;
+  font-weight: 600;
+}
+
 .subtitle {
   display: flex;
   justify-content: center;
 }
 .dictionary-app {
   width: fit-content;
-  border: 1px solid palevioletred;
+  border: 1px solid #d64933ff;
   border-radius: 22px;
   padding: 3px 7px;
   text-align: center;
-  background-color: white;
+  background-color: #eee5e9ff;
+}
+.coded-by {
+  color: #7c7c7cff;
 }

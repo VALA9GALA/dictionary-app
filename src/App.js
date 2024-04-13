@@ -11,25 +11,25 @@ export default function App() {
           <h1>
             <em className="valagala-title">VALA</em>
           </h1>
-          <span className="fs-2 text-secondary">noun </span>
-          <span>
+          <span className="fs-2 title-pos">noun </span>
+          <span className="val-gal ">
             {" "}
-            <em>a gal named val</em>
+            <em className="text-light-emphasis">a gal called val</em>
           </span>
           <h1>
             <em className="valagala-title">GALA</em>
           </h1>
           <br />
-          <div className="subtitle">
+          <div className="subtitle text-light-emphasis me-3">
             <h3 className="pt-1 me-3 dictionary-app">dictionary</h3>
-            <h3 className="pt-1 ms-3 dictionary-app">app</h3>
+            <h3 className=" ms-3 dictionary-app">app</h3>
           </div>
         </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="howdy" />
         </main>
         <footer>
-          <small>
+          <small className="coded-by">
             Coded by{" "}
             <a
               href="https://valagala.netlify.app"

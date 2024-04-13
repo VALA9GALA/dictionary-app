@@ -1,28 +1,33 @@
 .Dictionary {
-  background-color: aliceblue;
+  background-color: #eee5e9ff;
   padding: 10px;
   border-radius: 16px;
   margin: 20px auto;
   width: 80%;
-  box-shadow: 4px 7px #373f51ff;
+  box-shadow: 4px 7px;
 }
 form {
   padding-top: 25px;
 }
 .search-input {
   width: 45%;
+  background-color: rgba(238, 229, 233, 0.6);
+  border-radius: 0.375rem;
 }
 .part-of-speech {
-  color: gray;
+  color: #7c7c7cff;
+  font-weight: 600;
 }
 .word-section {
   padding: 10px;
+  background-color: rgba(212, 169, 210, 0.6);
 }
 .word {
-  color: #daa49aff;
+  color: #d64933ff;
+  font-weight: 600;
 }
 em {
-  color: #58a4b0ff;
+  color: rgba(214, 73, 51, 0.8);
 }
 section {
   margin: 10px;
@@ -30,20 +35,19 @@ section {
 .Synonyms,
 .Meaning .meaning-synonyms {
   display: inline-flex;
-
+  margin-top: 10px;
   padding: 5px;
 }
 .Synonyms li,
 .Meaning .synonyms {
-  margin-right: 10px;
   display: inline;
   width: fit-content;
-  border: 1px solid #daa49aff;
+  border: 1px solid #d64933ff;
   border-radius: 22px;
   padding: 3px 7px;
   list-style: none;
 }
 .audioIcon {
   cursor: pointer;
-  color: #58a4b0ff;
+  color: rgba(31, 210, 234, 0.82);
 }
