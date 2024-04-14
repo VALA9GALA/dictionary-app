@@ -27,6 +27,7 @@ export default function App() {
         </header>
         <main>
           <Dictionary defaultKeyword="howdy" />
+        
         </main>
         <footer>
           <small className="coded-by">

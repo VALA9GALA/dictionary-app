@@ -55,6 +55,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLemon, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import Results from "./Results";
+import Images from "./Images";
 
 import "./Dictionary.css";
 
@@ -63,6 +64,8 @@ export default function Dictionary(props) {
   let [results, setResults] = useState(null);
   let [error, setError] = useState("");
   let [loaded, setLoaded] = useState(false);
+  let [defaultImageUrl, setDefaultImageUrl] = useState("/IMG_0377-warmed.jpg");
+  let [images, setImages] = useState(null);
 
   function handleDictionaryResponse(response) {
     /*console.log(response.data[0]);
@@ -77,7 +80,8 @@ export default function Dictionary(props) {
   }
 
   function handleImgResponse(response) {
-    console.log(response);
+    console.log(response.data);
+    setImages(response.data.photos);
   }
 
   function handleError(error) {
@@ -113,6 +117,7 @@ export default function Dictionary(props) {
   }
 
   function load() {
+    
     setLoaded(true);
     search();
   }
@@ -137,10 +142,12 @@ export default function Dictionary(props) {
         <br />
         {error && <p className="error">{error}</p>}
         {results && <Results results={results} />}
+        <Images images={images} defaultImageUrl={defaultImageUrl} />
       </div>
     );
   } else {
     load();
+
     return "Loading...";
   }
 }
