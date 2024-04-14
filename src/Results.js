@@ -15,7 +15,7 @@ export default function Results(props) {
         <section className="word-phonetic-audio">
           <h2 className="word-section">
             <span className="word">{props.results.word}</span>{" "}
-            <span className="text-light-emphasis">{phoneticWord.text}</span>{" "}
+            <span className="text-light-emphasis phonetic-word">{phoneticWord.text}</span>{" "}
             <span>
               <Audio audio={audioFile} />
             </span>
