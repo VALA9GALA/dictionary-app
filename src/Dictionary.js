@@ -52,7 +52,7 @@ export default function Dictionary() {
 import React, { useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLemon } from "@fortawesome/free-solid-svg-icons";
+import { faLemon, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import Results from "./Results";
 
@@ -64,9 +64,9 @@ export default function Dictionary(props) {
   let [error, setError] = useState("");
   let [loaded, setLoaded] = useState(false);
 
-  function handleResponse(response) {
-    console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0].definition);
+  function handleDictionaryResponse(response) {
+    /*console.log(response.data[0]);
+    console.log(response.data[0].meanings[0].definitions[0].definition);*/
     if (response.data.length === 0) {
       setError("Word not found. Please check your spelling.");
       setResults(null);
@@ -74,6 +74,10 @@ export default function Dictionary(props) {
       setResults(response.data[0]);
       setError("");
     }
+  }
+
+  function handleImgResponse(response) {
+    console.log(response);
   }
 
   function handleError(error) {
@@ -92,8 +96,11 @@ export default function Dictionary(props) {
 
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(apiUrl).then(handleDictionaryResponse).catch(handleError);
 
-    axios.get(apiUrl).then(handleResponse).catch(handleError);
+    const imgApiKey = "045ace03oteb7d0da03b1286fde00d59";
+    let imgApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imgApiKey}`;
+    axios.get(imgApiUrl).then(handleImgResponse);
   }
 
   function handleSubmit(event) {
@@ -117,16 +124,14 @@ export default function Dictionary(props) {
           <form onSubmit={handleSubmit}>
             <input
               type="search"
-              className="pb-1 me-2 text-dark-emphasis search-input"
+              className="pb-1 pt-1 ps-3 text-dark-emphasis search-input"
               placeholder="Enter a word..."
               autoFocus
               onChange={keywordChange}
             />
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-outline-secondary shadow-sm"
-            />
+            <button className="btn btn-outline-secondary shadow-sm">
+              {<FontAwesomeIcon icon={faMagnifyingGlass} />}
+            </button>
           </form>
         </section>
         <br />

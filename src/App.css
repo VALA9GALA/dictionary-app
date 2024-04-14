@@ -1,8 +1,10 @@
 body {
   margin: 20px;
   text-align: center;
-  background-color: rgb(218, 173, 224);
+
   background-image: linear-gradient(rgb(183, 129, 190), rgb(254, 226, 238));
+  background-size: cover;
+  background-attachment: fixed;
   font-family: monospace;
 }
 
@@ -29,6 +31,7 @@ h1 {
 .title-pos {
   color: #7c7c7cff;
   font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .subtitle {

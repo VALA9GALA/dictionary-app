@@ -14,7 +14,7 @@ export default function App() {
           <span className="fs-2 title-pos">noun </span>
           <span className="val-gal ">
             {" "}
-            <em className="text-light-emphasis">a gal called val</em>
+            <em className="text-light-emphasis">a gal named val</em>
           </span>
           <h1>
             <em className="valagala-title">GALA</em>
