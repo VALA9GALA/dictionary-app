@@ -16,8 +16,6 @@ export default function Dictionary(props) {
   let [images, setImages] = useState(null);
 
   function handleDictionaryResponse(response) {
-    /*console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0].definition);*/
     if (response.data.length === 0) {
       setError("Word not found. Please check your spelling.");
       setResults(null);
@@ -100,7 +98,6 @@ export default function Dictionary(props) {
     );
   } else {
     load();
-
     return "Loading...";
   }
 }
