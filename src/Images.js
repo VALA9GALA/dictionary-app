@@ -75,7 +75,7 @@ export default function Images(props) {
                 <img
                   src={selectedImage}
                   className="img-fluid"
-                  alt={image.alt + " Enlarged"}
+                  alt={selectedImage.alt + " Enlarged"}
                 />
               </div>
             </div>
