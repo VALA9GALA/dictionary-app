@@ -13,6 +13,7 @@ export default function Images(props) {
     );
   } else {
     console.log(props.images);
+
     return (
       <div className="Images">
         <section>
@@ -22,7 +23,7 @@ export default function Images(props) {
                 className="img-fluid mt-1 mb-2"
                 src={image.src.landscape}
                 key={index}
-                alt={`Image ${index + 1}`}
+                alt={image.alt}
               />
             );
           })}
